@@ -78,8 +78,8 @@ df = pd.read_excel(file_precos,header = 1,index_col = 'Submercado').T.reset_inde
 df['index'] = df['index'].apply(lambda x: datetime(int(x.split()[2]),mapa[x.split()[0]],1))
 df = df.set_index('index')
 df.columns.name = None
-df.to_csv('preço_energia.csv')
-upload_file_to_directory('preço_energia.csv','DataLakeRiscoECompliance/DadosEnergiaCCEE')
+df.to_csv('preco_energia.csv')
+upload_file_to_directory('preco_energia.csv','DataLakeRiscoECompliance/DadosEnergiaCCEE')
 
 file_gsf = get_last_file('MRE - Geração x Garantia Física - Mês')
 
